@@ -1,0 +1,127 @@
+@use "css-reset";
+@use "variable" as v;
+
+@mixin flexCenter($direction) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin borderTop($color) {
+    border-top: 5px solid $color;
+}
+
+@mixin desktop {
+    @media (min-width: 900px) {
+        @content;
+    }
+}
+body {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    background: v.$very-light-gray;
+    & > main {
+        @include flexCenter(column);
+        padding: v.$padding;
+    }
+}
+
+.header {
+    text-align: center;
+    max-width: 554px;
+    & p {
+        margin-top: 1em;
+        font-size: 1.6em;
+        font-weight: 200;
+        color: v.$grayish-blue;
+        @include desktop {
+            font-size: 2.2em;
+        }
+    }
+    & p:nth-of-type(2) {
+        margin-top: 0.5em;
+        font-weight: 600;
+        color: v.$very-dark-blue;
+    }
+    & p:last-child {
+        font-size: 1em;
+        line-height: 1.5;
+        margin-top: 2em;
+        margin-bottom: 3em;
+    }    
+}
+
+.card {
+    background-color: white;
+    margin: 1rem 0;
+    border-radius: 0.25em;
+    padding: v.$padding;
+    color: v.$very-dark-blue;
+    display: flex;
+    flex-direction: column;
+    h2 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        padding-bottom: 1rem;
+        @include desktop {
+            font-size: 1.1rem;
+        }
+    }
+    p {
+        color: v.$grayish-blue;
+        font-size: 0.8rem;
+        padding-bottom: 2rem;
+        line-height: 1.8;
+        @include desktop {
+            font-size: 0.7rem;
+        }
+    }
+    img {
+        width: 40px;
+        height: 40px;
+        align-self: flex-end;
+        margin-top: auto;
+    }
+    @include desktop {
+        margin: 0;
+    }
+}
+.card-container {
+    width: 100%;
+    @include desktop {
+        display: grid;
+        grid-template: repeat(4, 1fr)/repeat(9, 1fr);
+        grid-template-areas: 
+        ". . . t t t . . ."
+        "s s s t t t c c c"
+        "s s s k k k c c c"
+        ". . . k k k . . .";
+        grid-gap: 20px;
+        max-width: 960px;
+    }
+    section:first-child {
+        @include borderTop(v.$cyan);
+        @include desktop {
+            grid-area: s;
+        }
+    }
+    section:nth-of-type(2) {
+        @include borderTop(v.$red);
+        @include desktop {
+            grid-area: t;
+        }
+    }
+    section:nth-of-type(3) {
+        @include borderTop(v.$orange);
+        @include desktop {
+            grid-area: k;
+        }
+    }
+    section:last-child {
+        @include borderTop(v.$blue);
+        @include desktop {
+            grid-area: c;
+        }
+    }    
+}

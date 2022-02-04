@@ -1,0 +1,182 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  background: #fafafa;
+}
+body > main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 2rem;
+}
+
+.header {
+  text-align: center;
+  max-width: 554px;
+}
+.header p {
+  margin-top: 1em;
+  font-size: 1.6em;
+  font-weight: 200;
+  color: #a3a5ae;
+}
+@media (min-width: 900px) {
+  .header p {
+    font-size: 2.2em;
+  }
+}
+.header p:nth-of-type(2) {
+  margin-top: 0.5em;
+  font-weight: 600;
+  color: #4c4e61;
+}
+.header p:last-child {
+  font-size: 1em;
+  line-height: 1.5;
+  margin-top: 2em;
+  margin-bottom: 3em;
+}
+
+.card {
+  background-color: white;
+  margin: 1rem 0;
+  border-radius: 0.25em;
+  padding: 2rem;
+  color: #4c4e61;
+  display: flex;
+  flex-direction: column;
+}
+.card h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+@media (min-width: 900px) {
+  .card h2 {
+    font-size: 1.1rem;
+  }
+}
+.card p {
+  color: #a3a5ae;
+  font-size: 0.8rem;
+  padding-bottom: 2rem;
+  line-height: 1.8;
+}
+@media (min-width: 900px) {
+  .card p {
+    font-size: 0.7rem;
+  }
+}
+.card img {
+  width: 40px;
+  height: 40px;
+  align-self: flex-end;
+  margin-top: auto;
+}
+@media (min-width: 900px) {
+  .card {
+    margin: 0;
+  }
+}
+
+.card-container {
+  width: 100%;
+}
+@media (min-width: 900px) {
+  .card-container {
+    display: grid;
+    grid-template: repeat(4, 1fr)/repeat(9, 1fr);
+    grid-template-areas: ". . . t t t . . ." "s s s t t t c c c" "s s s k k k c c c" ". . . k k k . . .";
+    grid-gap: 20px;
+    max-width: 960px;
+  }
+}
+.card-container section:first-child {
+  border-top: 5px solid #45d3d3;
+}
+@media (min-width: 900px) {
+  .card-container section:first-child {
+    grid-area: s;
+  }
+}
+.card-container section:nth-of-type(2) {
+  border-top: 5px solid #ea5353;
+}
+@media (min-width: 900px) {
+  .card-container section:nth-of-type(2) {
+    grid-area: t;
+  }
+}
+.card-container section:nth-of-type(3) {
+  border-top: 5px solid #fcaf4a;
+}
+@media (min-width: 900px) {
+  .card-container section:nth-of-type(3) {
+    grid-area: k;
+  }
+}
+.card-container section:last-child {
+  border-top: 5px solid #549ef2;
+}
+@media (min-width: 900px) {
+  .card-container section:last-child {
+    grid-area: c;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
