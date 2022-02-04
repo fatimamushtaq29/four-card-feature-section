@@ -31,7 +31,7 @@ Desktop Screenshot:
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: (https://fatimamushtaq29.github.io/four-card-feature-section/)
+- Live Site URL: https://fatimamushtaq29.github.io/four-card-feature-section/
 
 ## My process
 
