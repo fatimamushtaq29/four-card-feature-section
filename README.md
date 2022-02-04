@@ -30,7 +30,7 @@ Desktop Screenshot:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
+- Solution URL: https://www.frontendmentor.io/solutions/responsive-page-using-flexbox-and-grid-Y0X9pMSSQ
 - Live Site URL: https://fatimamushtaq29.github.io/four-card-feature-section/
 
 ## My process
